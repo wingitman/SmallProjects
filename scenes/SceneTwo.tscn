@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtju3658m0vuy"]
+
+[ext_resource type="Texture2D" uid="uid://bboljt6b13rv6" path="res://assets/4x4.png" id="1_ijayd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1bw85"]
+radius = 3.0
+
+[node name="SceneTwo" type="Node2D"]
+
+[node name="Ball" type="RigidBody2D" parent="."]
+position = Vector2(89, 27)
+disable_mode = 2
+gravity_scale = 0.0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_ijayd")
+
+[node name="Sprite2D1" type="Sprite2D" parent="Ball"]
+rotation = 0.197222
+scale = Vector2(2, 2)
+texture = ExtResource("1_ijayd")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Ball"]
+rotation = 0.392699
+scale = Vector2(2, 2)
+texture = ExtResource("1_ijayd")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Ball"]
+rotation = 0.589921
+scale = Vector2(2, 2)
+texture = ExtResource("1_ijayd")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Ball"]
+rotation = 0.785398
+scale = Vector2(2, 2)
+texture = ExtResource("1_ijayd")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Ball"]
+rotation = 0.98262
+scale = Vector2(2, 2)
+texture = ExtResource("1_ijayd")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Ball"]
+rotation = 1.1781
+scale = Vector2(2, 2)
+texture = ExtResource("1_ijayd")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Ball"]
+rotation = 1.37532
+scale = Vector2(2, 2)
+texture = ExtResource("1_ijayd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_1bw85")

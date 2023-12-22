@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "BwV6z0h5GtOvN2zKLLBPj1E9HgX3liV/SQqz0yhxOcFuXyuk/k0CiBANBxalbLbxQeENR5UBFsZ77FiRzUGKEw==",
+  "success": true,
+  "projectFilePath": "D:\\Creative\\Games\\GoDot\\SmallProjects\\SmallProjects.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hiccu\\.nuget\\packages\\godot.sourcegenerators\\4.1.3\\godot.sourcegenerators.4.1.3.nupkg.sha512",
+    "C:\\Users\\hiccu\\.nuget\\packages\\godotsharp\\4.1.3\\godotsharp.4.1.3.nupkg.sha512",
+    "C:\\Users\\hiccu\\.nuget\\packages\\godotsharpeditor\\4.1.3\\godotsharpeditor.4.1.3.nupkg.sha512"
+  ],
+  "logs": []
+}

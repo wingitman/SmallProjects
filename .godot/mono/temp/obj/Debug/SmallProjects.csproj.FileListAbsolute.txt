@@ -1,0 +1,17 @@
+D:\Creative\Games\GoDot\SmallProjects\.godot\mono\temp\obj\Debug\SmallProjects.csproj.AssemblyReference.cache
+D:\Creative\Games\GoDot\SmallProjects\.godot\mono\temp\obj\Debug\SmallProjects.GeneratedMSBuildEditorConfig.editorconfig
+D:\Creative\Games\GoDot\SmallProjects\.godot\mono\temp\obj\Debug\SmallProjects.AssemblyInfoInputs.cache
+D:\Creative\Games\GoDot\SmallProjects\.godot\mono\temp\obj\Debug\SmallProjects.AssemblyInfo.cs
+D:\Creative\Games\GoDot\SmallProjects\.godot\mono\temp\obj\Debug\SmallProjects.csproj.CoreCompileInputs.cache
+D:\Creative\Games\GoDot\SmallProjects\.godot\mono\temp\bin\Debug\SmallProjects.deps.json
+D:\Creative\Games\GoDot\SmallProjects\.godot\mono\temp\bin\Debug\SmallProjects.runtimeconfig.json
+D:\Creative\Games\GoDot\SmallProjects\.godot\mono\temp\bin\Debug\SmallProjects.dll
+D:\Creative\Games\GoDot\SmallProjects\.godot\mono\temp\bin\Debug\SmallProjects.pdb
+D:\Creative\Games\GoDot\SmallProjects\.godot\mono\temp\bin\Debug\GodotSharp.dll
+D:\Creative\Games\GoDot\SmallProjects\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+D:\Creative\Games\GoDot\SmallProjects\.godot\mono\temp\obj\Debug\SmallProjects.csproj.CopyComplete
+D:\Creative\Games\GoDot\SmallProjects\.godot\mono\temp\obj\Debug\SmallProjects.dll
+D:\Creative\Games\GoDot\SmallProjects\.godot\mono\temp\obj\Debug\refint\SmallProjects.dll
+D:\Creative\Games\GoDot\SmallProjects\.godot\mono\temp\obj\Debug\SmallProjects.pdb
+D:\Creative\Games\GoDot\SmallProjects\.godot\mono\temp\obj\Debug\SmallProjects.genruntimeconfig.cache
+D:\Creative\Games\GoDot\SmallProjects\.godot\mono\temp\obj\Debug\ref\SmallProjects.dll
