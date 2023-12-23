@@ -3,8 +3,6 @@ res://scripts/SceneChanger.gd
 res://scenes/RigidScene.tscn
 res://scenes/Pointer.tscn
 res://scenes/Peer.tscn
-res://scripts/Pointer.gd
 res://scenes/Platformer.tscn
-res://scripts/BasicMovement.gd
 res://scenes/bullet.tscn
 res://scripts/bullet.gd
