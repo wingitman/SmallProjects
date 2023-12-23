@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dtju3658m0vuy"]
+[gd_scene load_steps=4 format=3 uid="uid://dtju3658m0vuy"]
 
+[ext_resource type="Script" path="res://scripts/MouseMove.gd" id="1_6e18a"]
 [ext_resource type="Texture2D" uid="uid://bboljt6b13rv6" path="res://assets/4x4.png" id="1_ijayd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1bw85"]
@@ -8,9 +9,10 @@ radius = 3.0
 [node name="SceneTwo" type="Node2D"]
 
 [node name="Ball" type="RigidBody2D" parent="."]
-position = Vector2(89, 27)
+position = Vector2(94, 53)
 disable_mode = 2
 gravity_scale = 0.0
+script = ExtResource("1_6e18a")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Ball"]

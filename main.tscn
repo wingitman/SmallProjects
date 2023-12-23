@@ -1,7 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2lv8fhqoowuk"]
+[gd_scene load_steps=3 format=3 uid="uid://c2lv8fhqoowuk"]
 
-[ext_resource type="Script" path="res://scripts/Main.gd" id="1_3yh6r"]
+[ext_resource type="Script" path="res://scripts/SceneChanger.gd" id="1_le8t6"]
+[ext_resource type="Script" path="res://scripts/Lobby.gd" id="1_rockx"]
 
-[node name="main" type="Node2D"]
+[node name="Game" type="Node2D"]
 scale = Vector2(2, 2)
-script = ExtResource("1_3yh6r")
+script = ExtResource("1_rockx")
+
+[node name="SceneSelection" type="Node" parent="."]
+script = ExtResource("1_le8t6")

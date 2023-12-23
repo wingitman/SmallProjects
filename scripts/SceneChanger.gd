@@ -3,10 +3,11 @@ extends Node
 var sceneIndex = 0
 var currentScene = null
 var main
-var scene
 var sceneNames = [
 	"RigidScene",
-	"SceneTwo"
+	"Pointer",
+	"Peer",
+	"Platformer"
 ]
 var scenes = []
 func _init():
@@ -21,7 +22,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	sceneIndex = (0 if sceneIndex+1 >= scenes.size() else sceneIndex + 1) if Input.is_action_just_pressed("MouseModeSwitch") else sceneIndex
+	sceneIndex = (0 if sceneIndex+1 >= scenes.size() else sceneIndex + 1) if Input.is_action_just_pressed("ChangeScene") else sceneIndex
 	if (currentScene == null or not scenes[sceneIndex].Name.contains(currentScene.name)):
 		if (currentScene != null):
 			main.remove_child(currentScene)
