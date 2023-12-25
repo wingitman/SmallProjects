@@ -5,4 +5,3 @@ res://scenes/Pointer.tscn
 res://scenes/Peer.tscn
 res://scenes/Platformer.tscn
 res://scenes/bullet.tscn
-res://scripts/bullet.gd
