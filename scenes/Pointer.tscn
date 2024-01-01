@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dtju3658m0vuy"]
+[gd_scene load_steps=6 format=3 uid="uid://dtju3658m0vuy"]
 
 [ext_resource type="Script" path="res://scripts/Pointer.gd" id="1_7ikhv"]
 [ext_resource type="Texture2D" uid="uid://bboljt6b13rv6" path="res://assets/4x4.png" id="2_kykkx"]
+[ext_resource type="PackedScene" uid="uid://b6ulb0vnjig74" path="res://scenes/mob.tscn" id="3_dhqkc"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jupmt"]
 friction = 0.0
@@ -9,14 +10,10 @@ friction = 0.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_1bw85"]
 radius = 3.0
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_v1jl6"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l2u5q"]
-size = Vector2(4, 4)
-
 [node name="SceneTwo" type="Node2D"]
 
-[node name="Pointer" type="RigidBody2D" parent="."]
+[node name="Player" type="RigidBody2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(23, 136)
 input_pickable = true
 physics_material_override = SubResource("PhysicsMaterial_jupmt")
@@ -24,64 +21,55 @@ gravity_scale = 0.0
 script = ExtResource("1_7ikhv")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Pointer"]
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
 scale = Vector2(2, 2)
 texture = ExtResource("2_kykkx")
 
-[node name="Sprite2D1" type="Sprite2D" parent="Pointer"]
+[node name="Sprite2D1" type="Sprite2D" parent="Player"]
 rotation = 0.197222
 scale = Vector2(2, 2)
 texture = ExtResource("2_kykkx")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Pointer"]
+[node name="Sprite2D2" type="Sprite2D" parent="Player"]
 rotation = 0.392699
 scale = Vector2(2, 2)
 texture = ExtResource("2_kykkx")
 
-[node name="Sprite2D3" type="Sprite2D" parent="Pointer"]
+[node name="Sprite2D3" type="Sprite2D" parent="Player"]
 rotation = 0.589921
 scale = Vector2(2, 2)
 texture = ExtResource("2_kykkx")
 
-[node name="Sprite2D4" type="Sprite2D" parent="Pointer"]
+[node name="Sprite2D4" type="Sprite2D" parent="Player"]
 rotation = 0.785398
 scale = Vector2(2, 2)
 texture = ExtResource("2_kykkx")
 
-[node name="Sprite2D5" type="Sprite2D" parent="Pointer"]
+[node name="Sprite2D5" type="Sprite2D" parent="Player"]
 rotation = 0.98262
 scale = Vector2(2, 2)
 texture = ExtResource("2_kykkx")
 
-[node name="Sprite2D6" type="Sprite2D" parent="Pointer"]
+[node name="Sprite2D6" type="Sprite2D" parent="Player"]
 rotation = 1.1781
 scale = Vector2(2, 2)
 texture = ExtResource("2_kykkx")
 
-[node name="Sprite2D7" type="Sprite2D" parent="Pointer"]
+[node name="Sprite2D7" type="Sprite2D" parent="Player"]
 rotation = 1.37532
 scale = Vector2(2, 2)
 texture = ExtResource("2_kykkx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pointer"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_1bw85")
 
-[node name="Marker2D" type="Marker2D" parent="Pointer"]
+[node name="Marker2D" type="Marker2D" parent="Player"]
 show_behind_parent = true
 position = Vector2(25, 0)
 
-[node name="Sprite2D8" type="Sprite2D" parent="Pointer/Marker2D"]
+[node name="Sprite2D8" type="Sprite2D" parent="Player/Marker2D"]
 texture = ExtResource("2_kykkx")
 
-[node name="Box" type="StaticBody2D" parent="."]
-position = Vector2(104, 145)
-scale = Vector2(5, 5)
-physics_material_override = SubResource("PhysicsMaterial_v1jl6")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Box"]
-shape = SubResource("RectangleShape2D_l2u5q")
-
-[node name="Sprite2D" type="Sprite2D" parent="Box"]
-texture = ExtResource("2_kykkx")
+[node name="mob" parent="." instance=ExtResource("3_dhqkc")]
+position = Vector2(60, 117)

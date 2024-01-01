@@ -6,7 +6,8 @@ var main
 var sceneNames = [
 	"RigidScene",
 	"Pointer",
-	"Peer",
+	"MultiplayerSynchronizer",
+	"MultiplayerSynchronizer_Unreliable",
 	"Platformer"
 ]
 var scenes = []

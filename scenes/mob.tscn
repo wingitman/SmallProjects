@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6ulb0vnjig74"]
+
+[ext_resource type="Script" path="res://Mob.gd" id="1_my3oj"]
+[ext_resource type="Texture2D" uid="uid://bknubivlu7gts" path="res://assets/Untitled.png" id="2_57fae"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hyq3b"]
+size = Vector2(10, 10)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tg8co"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_awgnq"]
+
+[node name="mob" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_my3oj")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hyq3b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0350877, 0.0292398)
+texture = ExtResource("2_57fae")
+
+[node name="Healthbar" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_tg8co")
+position = Vector2(0, -8)
+scale = Vector2(3, 1)
+texture = SubResource("PlaceholderTexture2D_awgnq")
+
+[node name="dodge" type="Timer" parent="."]
+
+[connection signal="timeout" from="dodge" to="." method="_on_dodge_timeout"]

@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://bu4onjcbcc18o"]
+
+[ext_resource type="Script" path="res://scripts/BasicMovement.gd" id="1_oc1xb"]
+[ext_resource type="Texture2D" uid="uid://ce4acn2iv4yig" path="res://icon.svg" id="2_0o7aw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7j3lv"]
+size = Vector2(12, 12)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_csdt6"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/sync = true
+properties/0/watch = false
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_oc1xb")
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_0o7aw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7j3lv")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_csdt6")
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.03
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
