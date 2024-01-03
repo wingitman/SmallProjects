@@ -1,6 +1,7 @@
 extends RigidBody2D
 
 var marker2d
+var canShoot = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	marker2d = $"Marker2D"
@@ -19,8 +20,10 @@ func _physics_process(delta):
 	dist = dist if dist < 50 else 50
 	marker2d.position.x = dist/2
 	
-	if Input.is_action_just_pressed("Action"):
+	if Input.is_action_pressed("Action") and canShoot:
 		fire(marker2d.global_position,rot)
+		canShoot = false
+		$Shoot.start()
 
 func fire(from,angle):
 	var direction = Vector2(1,0).rotated(angle).normalized()
@@ -30,3 +33,7 @@ func fire(from,angle):
 	bullet.rotation = angle
 	bullet.scale *= 10
 	get_parent().add_child(bullet)
+
+
+func _on_shoot_timeout():
+	canShoot = true

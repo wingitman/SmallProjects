@@ -7,7 +7,7 @@ var doubleJump = false
 var sideJump = false # PARKOUR
 var lastDir = 0
 @onready var cam = $".Camera2D"
-
+var canShoot = true
 var edelta = 0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -68,6 +68,6 @@ func movement(delta):
 			if name == id:
 				position = lerp(position,pos,edelta * 15)
 				
-func _on_timer_timeout():
+func _on_multiplayer_rpc_update_timeout():
 	if is_multiplayer_authority():
 		rpc("updatePos",name,position)

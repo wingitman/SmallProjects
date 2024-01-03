@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dtju3658m0vuy"]
+[gd_scene load_steps=7 format=3 uid="uid://dtju3658m0vuy"]
 
 [ext_resource type="Script" path="res://scripts/Pointer.gd" id="1_7ikhv"]
 [ext_resource type="Texture2D" uid="uid://bboljt6b13rv6" path="res://assets/4x4.png" id="2_kykkx"]
 [ext_resource type="PackedScene" uid="uid://b6ulb0vnjig74" path="res://scenes/mob.tscn" id="3_dhqkc"]
+[ext_resource type="Script" path="res://scenes/Spawner.gd" id="3_p3gnr"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jupmt"]
 friction = 0.0
@@ -71,5 +72,24 @@ position = Vector2(25, 0)
 [node name="Sprite2D8" type="Sprite2D" parent="Player/Marker2D"]
 texture = ExtResource("2_kykkx")
 
-[node name="mob" parent="." instance=ExtResource("3_dhqkc")]
+[node name="Shoot" type="Timer" parent="Player"]
+wait_time = 0.2
+
+[node name="Spawner" type="Node2D" parent="."]
+script = ExtResource("3_p3gnr")
+
+[node name="Timer" type="Timer" parent="Spawner"]
+wait_time = 15.0
+autostart = true
+
+[node name="mob" parent="Spawner" instance=ExtResource("3_dhqkc")]
 position = Vector2(60, 117)
+
+[node name="mob2" parent="Spawner" instance=ExtResource("3_dhqkc")]
+position = Vector2(60, 117)
+
+[node name="mob3" parent="Spawner" instance=ExtResource("3_dhqkc")]
+position = Vector2(60, 117)
+
+[connection signal="timeout" from="Player/Shoot" to="Player" method="_on_shoot_timeout"]
+[connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]

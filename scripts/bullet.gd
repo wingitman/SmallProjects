@@ -18,7 +18,7 @@ func _process(delta):
 func _collide(body):
 	print("Collide: ",body.name, " : ", self.get_parent().name)
 	
-	if (body["health"] != null):
+	if (body.name.find("mob") != -1 and body['health'] != null):
 		body.health -= 10
 	
 	if (body.name != self.get_parent().name):
