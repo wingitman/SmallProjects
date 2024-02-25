@@ -4,8 +4,4 @@ res://scripts/BasicMovement.gd
 res://scripts/SceneChanger.gd
 res://scenes/mob.tscn
 res://scenes/bullet.tscn
-res://scenes/player.tscn
-res://Mob.gd
-res://scripts/Pointer.gd
-res://scripts/bullet.gd
-res://scenes/Spawner.gd
+res://main.tscn
